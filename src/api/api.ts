@@ -10,6 +10,13 @@ const api = axios.create({
   },
 });
 
+console.log("ENV:", import.meta.env.VITE_BACKEND_API_ENDPOINT);
+console.log("DEV:", import.meta.env.DEV);
+console.log(
+  "baseURL:",
+  import.meta.env.DEV ? "/api" : import.meta.env.VITE_BACKEND_API_ENDPOINT,
+);
+
 api.interceptors.request.use((config) => {
   const userId = localStorage.getItem("user_id");
   const orgId = localStorage.getItem("org_id");
