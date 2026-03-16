@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import SidebarLayout from "../components/SidebarLayout";
-import { SoftCard, GradientButton, ScoreChip } from "../components/shared";
+import { SoftCard, ScoreChip } from "../components/shared";
 import { Icon } from "../components/Icons";
 import { COLORS } from "../theme/theme";
 import { STATUS_COLORS } from "../data/orgData";

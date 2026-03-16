@@ -84,8 +84,6 @@ const Reports: React.FC = () => {
 
   const bestScore = scoresOnly.length > 0 ? Math.max(...scoresOnly) : null;
 
-  const completedSessions = sessions.filter((s) => s.ended_session);
-
   const sortedByDate = [...sessions]
     .filter((s) => s.score !== null && s.interview_date)
     .sort(

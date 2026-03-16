@@ -31,7 +31,6 @@ import OrgAnalytics from "./pages/OrgAnalytics";
 import Features from "./pages/Features";
 import Demo from "./pages/Demo";
 import NotFound from "./pages/NotFound";
-import { RoomOutlined } from "@mui/icons-material";
 
 // Hide Nav/Footer on all app shell pages
 const BARE_PREFIXES = [

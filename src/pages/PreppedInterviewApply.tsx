@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, CircularProgress } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import { COLORS, RADIUS, SHADOWS } from "../theme/theme";
+import { COLORS } from "../theme/theme";
 import { SoftCard, GradientButton } from "../components/shared";
 import { Icon } from "../components/Icons";
 import api from "../api/api";

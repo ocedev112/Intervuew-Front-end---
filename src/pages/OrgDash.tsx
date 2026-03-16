@@ -432,9 +432,6 @@ const OrgDash: React.FC = () => {
             }}
           >
             {activeRoles.slice(0, 3).map((j) => {
-              const recommended = j.applicants.filter(
-                (a) => getStatus(a.applicant, a.report) === "Recommended",
-              ).length;
               const scoresArr = j.applicants
                 .map((a) => a.report?.score)
                 .filter((s): s is number => s !== null && s !== undefined);

@@ -36,7 +36,7 @@ const Interview: React.FC = () => {
   const nav = useNavigate();
   const [speaking, setSpeaking] = useState(false);
   const [timer, setTimer] = useState(0);
-  const [micActive, setMicActive] = useState(true);
+  const [micActive] = useState(true);
   const [applicant, setApplicant] = useState<ApplicantDict | null>(null);
   const [interview, setInterview] = useState<InterviewDict | null>(null);
   const params = useParams();
@@ -59,7 +59,7 @@ const Interview: React.FC = () => {
   const [startVideoRequested, setStartVideoRequested] = useState(false);
   const lastSentRef = useRef<number>(0);
   const [sessionStarted, setSessionStarted] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
+  const [_userId, setUserId] = useState<string | null>(null);
   const [isClosed, setIsClosed] = useState(false);
   const [closedReason, setClosedReason] =
     useState<string>("Session has closed");
@@ -247,7 +247,7 @@ const Interview: React.FC = () => {
       wsRef.current.video = ws;
       ws.binaryType = "arraybuffer";
 
-      await new Promise<void>((resolve, reject) => {
+      await new Promise<void>((resolve) => {
         ws.onopen = () => {
           setConnected(true);
           resolve();
